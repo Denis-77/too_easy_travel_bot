@@ -1,0 +1,7 @@
+.idea/
+Drafts/
+.env
+bot_data/
+my_bot_venv/
+__pycache__/
+excs.log
