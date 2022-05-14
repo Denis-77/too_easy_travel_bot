@@ -669,11 +669,6 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 
-try:
-    bot.add_custom_filter(custom_filters.StateFilter(bot))
-    bot.polling(none_stop=True, interval=0)
 
-except Exception:
-    logging.error("\n\n\nException occurred in {time}".format(
-        time=datetime.datetime.now()
-    ), exc_info=True)
+bot.add_custom_filter(custom_filters.StateFilter(bot))
+bot.polling(none_stop=True, interval=0)
